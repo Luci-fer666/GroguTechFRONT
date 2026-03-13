@@ -1,0 +1,127 @@
+
+.crear-producto-container {
+  max-width: 650px;
+  margin: 60px auto;
+  background-color: #29015a;
+  border-radius: 14px;
+  padding: 35px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+/* titulo */
+
+.titulo-formulario {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* layout del form */
+
+.formulario-producto {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.campo-formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+/* labels */
+
+.campo-formulario label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #f1f1f1;
+}
+
+/* inputs */
+
+.campo-formulario input,
+.campo-formulario textarea,
+.campo-formulario select {
+
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  padding: 11px;
+  font-size: 0.95rem;
+
+  color: #111;
+
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campo-formulario textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* focus */
+
+.campo-formulario input:focus,
+.campo-formulario textarea:focus,
+.campo-formulario select:focus {
+
+  outline: none;
+  border-color: #83bc37;
+  box-shadow: 0 0 5px rgba(131,188,55,0.5);
+}
+
+/* preview imagen */
+
+.preview-imagen {
+
+  margin-top: 12px;
+  max-width: 100%;
+  max-height: 220px;
+
+  border-radius: 8px;
+  border: 2px solid #83bc37;
+}
+
+/* botón */
+
+.btn-crear {
+
+  margin-top: 15px;
+
+  background-color: #83bc37;
+  color: white;
+
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+
+  transition: background-color 0.2s, transform 0.15s;
+}
+
+.btn-crear:hover {
+  background-color: #6fa12c;
+  transform: scale(1.03);
+}
+
+/* responsive */
+
+@media (max-width: 600px) {
+
+  .crear-producto-container {
+    margin: 30px 15px;
+    padding: 25px;
+  }
+
+  .titulo-formulario {
+    font-size: 1.5rem;
+  }
+
+}
+

@@ -1,0 +1,24 @@
+.carruselportada {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+#myCarousel {
+  width: 70vw;       
+  max-width: 1100px;  
+}
+
+.carousel_img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  background-color: rgb(32, 2, 44);
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  #myCarousel {
+    width: 95vw;
+  }
+}

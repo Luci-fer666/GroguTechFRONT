@@ -1,0 +1,158 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+/* ---------- ESTRUCTURA GENERAL ---------- */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.main-content {
+  flex: 1;
+}
+body{
+  background-color:#0b001a;
+  font-family: "inter", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  color:#e5e7eb;
+}
+
+/* ---------- MAIN ---------- */
+main {
+  flex: 1;
+  background-color: #1a0833;
+}
+main a {
+  color: #83bc37;
+}
+main a:hover{
+  color:#d92c85;
+}
+
+/* ---------- CONTENEDOR ---------- */
+.background-main{
+  margin-top: 10px;
+  background-color: #12002b;
+  align-self: center;
+  width: 85%;
+  border-radius:12px;
+  box-shadow:0 0 25px rgba(217,44,133,0.25);
+}
+
+
+
+#boton-buscar {
+  padding:12px;
+  font-size:1rem;
+  background-color:#83bc37;
+  color:#0b001a;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+#boton-buscar:hover{
+  background:#d92c85;
+  color:white;
+}
+
+#q {
+  flex:1;
+  padding:10px;
+  font-size:1rem;
+  border:1px solid #29015a;
+  border-radius:10px;
+  background:#0b001a;
+  color:white;
+}
+
+/* ---------- GRID PRODUCTOS ---------- */
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  padding:60px;
+  list-style:none;
+}
+
+.product-grid li{
+  background-color:#12002b;
+  border-radius:12px;
+  box-shadow:0 0 15px rgba(0,0,0,0.5);
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+
+.product-grid li:hover{
+  transform:translateY(-5px);
+  box-shadow:0 0 20px rgba(217,44,133,0.5);
+}
+
+.product-grid li img{
+  background:#000;
+  margin-top:5px;
+  width:70%;
+  height:180px;
+  object-fit:cover;
+  align-self:center;
+}
+
+.product-grid li h3{
+  margin:30px 20px;
+  color:#83bc37;
+}
+
+.product-grid li .descripcion-producto{
+  margin:0 20px 30px;
+  flex-grow:1;
+  color:#d1d5db;
+}
+
+.product-grid li .precio-producto{
+  padding:10px;
+  margin:0 20px;
+  color:#83bc37;
+  font-weight:bold;
+}
+
+/* ---------- BOTONES ---------- */
+
+.btn{
+  padding:8px 12px;
+  border-radius:8px;
+  border:1px solid #83bc37;
+  text-align:center;
+  text-decoration:none;
+  font-weight:600;
+  background:#12002b;
+  color:#83bc37;
+}
+
+.btn:hover{
+  background:#d92c85;
+  border-color:#d92c85;
+  color:white;
+}
+
+/* ---------- TOAST ---------- */
+
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:16px;
+  transform:translateX(-50%);
+  background:#29015a;
+  color:#fff;
+  padding:10px 14px;
+  border-radius:6px;
+  box-shadow:0 0 15px rgba(217,44,133,0.6);
+  font-size:.95rem;
+  z-index:9999;
+}

@@ -1,0 +1,68 @@
+
+.site-footer {
+  background-color: #29015a;
+  width: 100%;
+  margin: 0;
+  padding: 2rem 0;
+  box-sizing: border-box;
+  color: #e5e7eb;
+  border-top: 2px solid #83bc37;
+  box-shadow: 0 -5px 20px rgba(217,44,133,0.25);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+}
+
+/* columnas en desktop */
+
+@media (min-width: 901px) {
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.footer-section {
+  min-width: 200px;
+}
+
+/* títulos del footer */
+
+.footer-section h3 {
+  color: #83bc37;
+  margin-bottom: 10px;
+  text-shadow: 0 0 6px rgba(131,188,55,0.5);
+}
+
+/* lista */
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* links */
+
+.footer-section a {
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+/* hover gaming */
+
+.footer-section a:hover {
+  color: #d92c85;
+  text-shadow: 0 0 6px #d92c85;
+}
+

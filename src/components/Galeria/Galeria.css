@@ -1,0 +1,64 @@
+
+.galeriaFila{
+
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 10px 0;
+
+}
+
+/* cada slide centrado */
+
+.swiper-slide{
+
+  display: flex;
+  justify-content: center;
+
+}
+
+/* imagen */
+
+.imagenGaleriaFila{
+
+  width: 100%;
+  max-width: 250px;
+
+  height: auto;
+
+  object-fit: contain;
+
+}
+
+/* tablet */
+
+@media (max-width: 1024px){
+
+  .imagenGaleriaFila{
+    max-width: 200px;
+  }
+
+}
+
+/* celular */
+
+@media (max-width: 768px){
+
+  .imagenGaleriaFila{
+    max-width: 150px;
+  }
+
+}
+
+/* celular pequeño */
+
+@media (max-width: 480px){
+
+  .imagenGaleriaFila{
+    max-width: 120px;
+  }
+
+}
+

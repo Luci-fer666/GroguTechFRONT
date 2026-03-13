@@ -1,0 +1,99 @@
+
+/* ---------- HEADER GRID ---------- */
+.site-header{
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 20px;
+  background-color: #29015a;
+  padding: 10px 30px;
+}
+
+/* ---------- LOGO ---------- */
+.branding{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.branding img{
+  height: 180px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px #83bc37);
+}
+
+/* ---------- BUSCADOR ---------- */
+.search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.search input{
+  width: 100%;
+  max-width: 350px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #83bc37;
+  background: #12002b;
+  color: white;
+}
+
+.search input:focus{
+  outline: none;
+  box-shadow: 0 0 8px #d92c85;
+}
+
+.search button{
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #83bc37;
+  color: #0b001a;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search button:hover{
+  background: #d92c85;
+  color: white;
+}
+
+/* ---------- NAV ---------- */
+.site-nav{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.site-nav a{
+  color: #83bc37;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.site-nav a:hover{
+  color: #d92c85;
+  text-shadow: 0 0 8px #d92c85;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px){
+.site-header{
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+.branding{
+  justify-content: center;
+}
+.site-nav{
+  justify-content: center;
+}
+.search{
+  justify-content: center;
+}
+}

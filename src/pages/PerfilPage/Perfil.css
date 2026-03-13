@@ -1,0 +1,104 @@
+
+/* Contenedor principal */
+#perfil-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #1b003d;
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* tarjeta */
+.perfil-card {
+  background: #29015a;
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 14px;
+  text-align: center;
+  border: 1px solid rgba(131,188,55,0.4);
+  box-shadow:
+    0 0 12px rgba(131,188,55,0.25),
+    0 0 25px rgba(0,0,0,0.4);
+}
+
+/* nombre */
+.perfil-nombre {
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* imagen */
+.perfil-imagen {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  padding: 10px;
+  background: #1b003d;
+  border: 2px solid #83bc37;
+}
+
+/* lista de datos */
+.perfil-lista {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  text-align: left;
+  color: #e5e7eb;
+}
+
+.perfil-lista li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding-bottom: 6px;
+}
+
+/* botones */
+.btn-logout {
+  display: inline-block;
+  background: #83bc37;
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: background 0.25s, transform 0.15s;
+}
+
+.btn-logout:hover {
+  background: #6fa12c;
+  transform: scale(1.03);
+}
+
+/* links */
+.perfil-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.perfil-link {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px;
+  background: #1b003d;
+  border-radius: 8px;
+  border: 1px solid rgba(131,188,55,0.4);
+  font-weight: 500;
+  transition:
+    background 0.25s,
+    border-color 0.25s;
+}
+
+.perfil-link:hover {
+  background: #2a0055;
+  border-color: #d92c85;
+}
+

@@ -1,0 +1,67 @@
+.background-main{
+  margin-top: 15px;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  width: 85%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 10px;
+}
+.productos {
+  align-content: center;
+  align-self: center;
+  color: #e5e7eb;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.4;
+  padding-bottom: 3rem;
+}
+
+#bienvenida {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+  color: #83bc37;
+  text-shadow: 0 0 10px rgba(131,188,55,0.6);
+}
+.historia h2,
+.que-ofrecemos h2{
+  color: #83bc37;
+  text-shadow: 0 0 8px rgba(131,188,55,0.6);
+}
+
+/* SECCIONES */
+.historia {
+  margin-top: 40px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.que-ofrecemos {
+  margin-top: 40px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+/* DETALLES NEON */
+.historia::after,
+.que-ofrecemos::after{
+  content: "";
+  display: block;
+  width: 120px;
+  height: 3px;
+  margin: 25px auto;
+  background: #d92c85;
+  box-shadow: 0 0 10px #d92c85;
+}
+
+/* GRID */
+.product-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+galeria{
+  width: 100%;
+  max-width: 100%;
+}
