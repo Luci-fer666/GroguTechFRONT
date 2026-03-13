@@ -58,8 +58,6 @@ function CrearProducto() {
         throw new Error(errorData.message || "La creación falló.");
       }
 
-      const result = await response.json();
-
       alert(`¡Creación exitosa para ${formData.nombre}!`);
 
       setFormData({
@@ -83,13 +81,9 @@ function CrearProducto() {
   }
 
   return (
-
     <div className="crear-producto-container">
-
       <h2 className="titulo-formulario">Agregar nuevo producto</h2>
-
       <form className="formulario-producto" onSubmit={handleSubmit}>
-
         <div className="campo-formulario">
           <label htmlFor="nombre">Nombre del producto</label>
           <input
@@ -170,11 +164,8 @@ function CrearProducto() {
         <button type="submit" className="btn-crear">
           Crear producto
         </button>
-
       </form>
-
     </div>
-
   );
 }
 
