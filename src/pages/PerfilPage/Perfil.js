@@ -4,6 +4,8 @@ import { AuthContext } from '../../auth/AuthContext.js';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import './Perfil.css';
+import Loading from '../../components/Loading/loading.js';
+import Error from '../../components/Error/error.js';
 
 function Perfil() {
   const { currentUser, logout } = useContext(AuthContext);
@@ -40,7 +42,7 @@ function Perfil() {
 
       } catch (err) {
         console.error("Error al obtener usuario:", err);
-        setError(err);
+        setError(err.message);
       } finally {
         setLoading(false);
       }
@@ -51,12 +53,12 @@ function Perfil() {
     }
   }, [id]);
 
-  if (loading) return <p>Cargando perfil...</p>;
+  if (loading) return <Loading/>;
   if (!currentUser){
     navigate("/login");
     return <p>Debes iniciar sesión para visualizar esta página</p>;
   }
-  if (error) return <p>Error: {error.message}</p>;
+  if (error) return <Error errormessage={error}/>;
   if (!user) return <p>No se encontró el usuario
                     <button className="btn-logout" onClick={logout}>Logout</button> </p>;
 
@@ -67,14 +69,13 @@ function Perfil() {
 
         <img
           className="perfil-imagen"
-          src="https://www.svgrepo.com/show/384670/account-avatar-profile-user.svg"
+          src={user.usericon}
           alt={user.username}
         />
 
         <ul className="perfil-lista">
           <li><strong>Usuario:</strong> {user.username}</li>
           <li><strong>Email:</strong> {user.email}</li>
-          <li><strong>Rol:</strong> {user.roles}</li>
         </ul>
 
         <button className="btn-logout" onClick={logout}>Logout</button>

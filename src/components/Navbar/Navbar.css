@@ -67,6 +67,8 @@
   justify-content: flex-end;
   align-items: center;
   gap: 2rem;
+  flex-wrap: wrap;          /* 🔑 permite bajar a otra línea */
+  max-width: 100%;
 }
 
 .site-nav a{
@@ -83,17 +85,52 @@
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 900px){
-.site-header{
-  grid-template-columns: 1fr;
-  gap: 15px;
+
+  .site-header{
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .branding{
+    justify-content: center;
+  }
+
+  .search{
+    justify-content: center;
+    width: 100%;
+  }
+
+  .site-nav{
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
 }
-.branding{
-  justify-content: center;
+
+@media (max-width: 500px){
+
+  .site-nav{
+    flex-direction: column;   /* 🔥 evita overflow completamente */
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .site-nav a{
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+  }
+
 }
-.site-nav{
-  justify-content: center;
+@media (max-width: 900px){
+  .branding img{
+    height: 100px;
+  }
 }
-.search{
-  justify-content: center;
-}
+
+@media (max-width: 500px){
+  .branding img{
+    height: 70px;
+  }
 }

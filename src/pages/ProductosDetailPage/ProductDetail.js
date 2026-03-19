@@ -4,6 +4,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { CartContext } from '../../auth/CartContext';
 import { AuthContext } from '../../auth/AuthContext.js';
 import './ProductDetail.css';
+import Loading from '../../components/Loading/loading.js';
+import Error from '../../components/Error/error.js';
 
 function ProductoDetail() {
   const { addItemToCart } = useContext(CartContext);
@@ -40,8 +42,8 @@ function ProductoDetail() {
   }, [id]);
 
 
-  if (loading) return <p>Cargando producto...</p>;
-  if (error) return <p>Error al cargar los datos: {error.message}</p>;
+  if (loading) return <Loading/>
+  if (error) return <Error errormessage={error.message}/>;
   if (!producto) return <p>Producto no encontrado</p>;
 
   const eliminarProducto = async () => {

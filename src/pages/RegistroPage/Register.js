@@ -7,6 +7,7 @@ function Register() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: "",
+    usericon: "",
     email: "",
     password: "",
   });
@@ -38,7 +39,7 @@ function Register() {
       }
 
       alert(`¡Registro exitoso para ${formData.username}!`);
-      setFormData({ username: "", email: "", password: "" });
+      setFormData({ username: "", usericon: "", email: "", password: "" });
       navigate("/productos");
 
     } catch (error) {
@@ -59,6 +60,19 @@ function Register() {
             name="username"
             placeholder="Ej: josejose"
             value={formData.username}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div className="campo-formulario">
+          <label htmlFor="usericon">Foto de perfil</label>
+          <input
+            type="url"
+            id="usericon"
+            name="usericon"
+            placeholder="Ej: https://dr-house...jpg"
+            value={formData.usericon}
             onChange={handleChange}
             required
           />
