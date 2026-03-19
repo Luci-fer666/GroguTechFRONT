@@ -31,7 +31,7 @@ function Footer() {
                     <h3>Contacto</h3>
                     <ul>
                         <li><strong>Teléfono: </strong>+54 11 2694-8588</li>
-                        <li><strong>Email: </strong><a href="mailto:techgrogu@gmail.com">info@hermanosjota.com.ar</a></li>
+                        <li><strong>Email: </strong><a href="mailto:techgrogu@gmail.com">techgrogu@gmail.com</a></li>
                     </ul>
                 </div>
             </div>
