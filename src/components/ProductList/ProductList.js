@@ -1,6 +1,8 @@
 import './ProductList.css';
 import ProductCard from '../ProductCard/ProductCard.js';
 import React, { useState, useEffect } from 'react';
+import Error from "../Error/error.js"
+import Loading from "../Loading/loading.js"
 
 function ProductList() {
   const [productos, setProducts] = useState([]);
@@ -27,10 +29,8 @@ function ProductList() {
         setLoading(false);
       } };
     fetchProducts(); }, []);
-  if (loading) {
-    return <p>Cargando productos...</p>; }
-  if (error) {
-    return <p>Error al cargar los datos: {error.message}</p>; }
+  if (loading) return <Loading/>;
+  if (error) return <Error errormessage={error.message}/>;
 
     return (<>
         <ul id="lista-productos" className="product-grid" aria-live="polite">

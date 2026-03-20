@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import './BodyIndex.css';
 import Carrousel from '../../components/Carrousel/carrousel';
 import GaleriaFila from '../../components/Galeria/galeria.js';
+import Loading from "../../components/Loading/loading.js";
+import Error from "../../components/Error/error.js";
 
 function IndexBody() {
   const [products, setProducts] = useState([]);
@@ -28,12 +30,8 @@ function IndexBody() {
     };
     fetchProducts();
   }, []);
-  if (loading) {
-    return <p>Cargando productos...</p>;
-  }
-  if (error) {
-    return <p>Error al cargar los datos: {error.message}</p>;
-  }
+   if (loading) return <Loading/>;
+  if (error) return <Error errormessage={error.message}/>;
 
   /* ----------- FILTROS ----------- */
   const nuevo = [...products]

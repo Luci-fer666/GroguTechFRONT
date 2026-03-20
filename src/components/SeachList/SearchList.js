@@ -1,5 +1,7 @@
 import './SearchList.css';
 import ProductCard from '../ProductCard/ProductCard.js';
+import Error from "../Error/error.js"
+import Loading from "../Loading/loading.js"
 import { useEffect, useState } from "react";
 
 function SearchList({search}) {
@@ -27,8 +29,8 @@ function SearchList({search}) {
     };
     fetchBusqueda();
   }, [search]);
-  if (loading) return <p>Buscando productos...</p>;
-  if (error) return <p>Error: {error.message}</p>;
+  if (loading) return <Loading/>;
+  if (error) return <Error errormessage={error.message}/>;
   return (
     <main>
       <h2>Resultados para: "{search}"</h2>
